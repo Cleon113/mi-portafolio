@@ -1,0 +1,13 @@
+<nav class="nav" [class.nav--scrolled]="isScrolled">
+  <div class="nav__container">
+    <a href="#home" class="nav__logo" data-text="C.">&lt;C/&gt;</a>
+    <ul class="nav__links" [class.nav__links--open]="menuOpen">
+      <li *ngFor="let link of links">
+        <a [href]="'#' + link.id" (click)="menuOpen = false">{{ link.label }}</a>
+      </li>
+    </ul>
+    <button class="nav__burger" (click)="menuOpen = !menuOpen">
+      <span [class.open]="menuOpen"></span>
+    </button>
+  </div>
+</nav>

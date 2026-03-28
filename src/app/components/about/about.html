@@ -1,0 +1,30 @@
+<section class="about" id="about">
+  <div class="about__container">
+    <h2 class="about__title" data-text="Sobre mí">Sobre mí</h2>
+    <div class="about__grid">
+      <div class="about__text">
+        <p>
+          Soy Camilo — desarrollador colombiano viviendo en Hamburg, Alemania.
+          Me formé como <span class="highlight">Fachinformatiker für Anwendungsentwicklung</span>,
+          donde trabajé con frontend, backend, bases de datos y buenas prácticas
+          de desarrollo.
+        </p>
+        <p>
+          He construido mi carrera empezando de cero en países diferentes.
+          Esa resiliencia es lo que traigo a cada línea de código: adaptabilidad,
+          ganas de aprender y la mentalidad de resolver problemas reales.
+        </p>
+        <p>
+          Cuando no estoy programando, estoy en el gym, en la bici,
+          experimentando en la cocina o leveling up mi alemán e inglés.
+        </p>
+      </div>
+      <div class="about__stats">
+        <div class="stat" *ngFor="let stat of stats">
+          <span class="stat__number">{{ stat.value }}</span>
+          <span class="stat__label">{{ stat.label }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="contact" id="contact">
+  <div class="contact__container">
+    <h2 class="contact__title">Contacto</h2>
+    <p class="contact__subtitle">
+      ¿Tienes un proyecto en mente o buscas un developer? Escríbeme.
+    </p>
+    <div class="contact__links">
+      <a *ngFor="let link of links"
+         [href]="link.url"
+         target="_blank"
+         class="contact__card">
+        <span class="contact__icon">{{ link.icon }}</span>
+        <span class="contact__label">{{ link.label }}</span>
+        <span class="contact__value">{{ link.value }}</span>
+      </a>
+    </div>
+    <div class="contact__footer">
+      <p>&lt;/&gt; con ☕ desde Hamburg — {{ year }}</p>
+    </div>
+  </div>
+</section>
