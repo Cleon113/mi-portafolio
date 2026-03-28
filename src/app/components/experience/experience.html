@@ -1,8 +1,8 @@
-<section class="experience" id="experience">
+<section class="experience" id="experience" #section>
   <div class="experience__container">
-    <h2 class="experience__title">Experiencia</h2>
+    <h2 class="experience__title animate-on-scroll">Experiencia</h2>
     <div class="timeline">
-      <div class="timeline__item" *ngFor="let job of jobs; let i = index"
+      <div class="timeline__item animate-on-scroll" *ngFor="let job of jobs; let i = index"
            [class.timeline__item--right]="i % 2 !== 0">
         <div class="timeline__dot"></div>
         <div class="timeline__card">

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollAnimationService } from '../../services/scroll-animation';
 
 @Component({
   selector: 'app-projects',
@@ -8,31 +9,32 @@ import { CommonModule } from '@angular/common';
   templateUrl: './projects.html',
   styleUrl: './projects.scss'
 })
-export class Projects {
+export class Projects implements AfterViewInit {
+  @ViewChild('section') section!: ElementRef;
+
+  constructor(private scrollAnimation: ScrollAnimationService) {}
+
+  ngAfterViewInit() {
+    this.scrollAnimation.observe(this.section.nativeElement);
+  }
+
   projects = [
+    {
+      icon: '🎓',
+      name: 'AzubiPortal',
+      description: 'Plataforma full-stack para gestión y seguimiento de aprendices. Los formadores crean proyectos y tareas, los Azubis gestionan su progreso. Autenticación JWT con control de acceso por roles.',
+      tags: ['Angular', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'REST API'],
+      github: null,
+      live: null,
+      note: 'Abschlussprojekt – Crealogix (privado)'
+    },
     {
       icon: '⚡',
       name: 'Portfolio Website',
-      description: 'Mi portafolio personal construido con Angular, SCSS y diseño Glitch Noir. Desplegado en GitHub Pages.',
-      tags: ['Angular', 'TypeScript', 'SCSS'],
-      github: 'https://github.com/TU_USUARIO/mi-portafolio',
-      live: 'https://TU_USUARIO.github.io/mi-portafolio/'
-    },
-    {
-      icon: '🛒',
-      name: 'E-Commerce App',
-      description: 'Aplicación full-stack de comercio electrónico con carrito de compras, autenticación y pasarela de pagos.',
-      tags: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
-      github: 'https://github.com/TU_USUARIO/ecommerce',
-      live: null
-    },
-    {
-      icon: '📋',
-      name: 'Task Manager API',
-      description: 'REST API para gestión de tareas con autenticación JWT, CRUD completo y documentación Swagger.',
-      tags: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-      github: 'https://github.com/TU_USUARIO/task-api',
-      live: null
+      description: 'Mi portafolio personal con diseño Glitch Noir Terminal. Scroll animations, typewriter effect, diseño responsive y deploy automatizado en GitHub Pages.',
+      tags: ['Angular', 'TypeScript', 'SCSS', 'GitHub Pages'],
+      github: 'https://github.com/Cleon113/mi-portafolio',
+      live: 'https://Cleon113.github.io/mi-portafolio/'
     }
   ];
 }

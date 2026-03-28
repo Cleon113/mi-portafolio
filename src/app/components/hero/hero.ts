@@ -7,7 +7,7 @@ import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
   styleUrl: './hero.scss'
 })
 export class Hero implements AfterViewInit {
-  roles = ['Frontend Developer', 'Backend Developer', 'Fachinformatiker'];
+  roles = ['Junior Software Developer ', 'Frontend Developer ', 'Fachinformatiker für Anwendungsentwicklung '];
   currentRole = '';
   roleIndex = 0;
   charIndex = 0;
@@ -18,13 +18,6 @@ export class Hero implements AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => this.typeEffect(), 0);
   }
-
-  scrollTo(id: string) {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-}
 
   typeEffect() {
     const current = this.roles[this.roleIndex];
@@ -47,5 +40,12 @@ export class Hero implements AfterViewInit {
 
     this.cdr.detectChanges();
     setTimeout(() => this.typeEffect(), this.isDeleting ? 50 : 100);
+  }
+
+  scrollTo(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

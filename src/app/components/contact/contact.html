@@ -1,20 +1,20 @@
-<section class="contact" id="contact">
+<section class="contact" id="contact" #section>
   <div class="contact__container">
-    <h2 class="contact__title">Contacto</h2>
-    <p class="contact__subtitle">
+    <h2 class="contact__title animate-on-scroll">Contacto</h2>
+    <p class="contact__subtitle animate-on-scroll">
       ¿Tienes un proyecto en mente o buscas un developer? Escríbeme.
     </p>
     <div class="contact__links">
       <a *ngFor="let link of links"
          [href]="link.url"
          target="_blank"
-         class="contact__card">
+         class="contact__card animate-on-scroll">
         <span class="contact__icon">{{ link.icon }}</span>
         <span class="contact__label">{{ link.label }}</span>
         <span class="contact__value">{{ link.value }}</span>
       </a>
     </div>
-    <div class="contact__footer">
+    <div class="contact__footer animate-on-scroll">
       <p>&lt;/&gt; con ☕ desde Hamburg — {{ year }}</p>
     </div>
   </div>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollAnimationService } from '../../services/scroll-animation';
 
 @Component({
   selector: 'app-skills',
@@ -8,23 +9,31 @@ import { CommonModule } from '@angular/common';
   templateUrl: './skills.html',
   styleUrl: './skills.scss'
 })
-export class Skills {
+export class Skills implements AfterViewInit {
+  @ViewChild('section') section!: ElementRef;
+
+  constructor(private scrollAnimation: ScrollAnimationService) {}
+
+  ngAfterViewInit() {
+    this.scrollAnimation.observe(this.section.nativeElement);
+  }
+
   categories = [
     {
       name: 'Frontend',
-      items: ['Angular', 'TypeScript', 'HTML5', 'CSS3/SCSS', 'JavaScript', 'Responsive Design']
+      items: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3/SCSS', 'Responsive Design']
     },
     {
       name: 'Backend',
-      items: ['Java', 'Spring Boot', 'Node.js', 'REST APIs', 'SQL', 'PostgreSQL']
+      items: ['Java', 'Node.js', 'Express', 'RESTful APIs', 'SQL', 'PostgreSQL']
     },
     {
-      name: 'Tools & DevOps',
-      items: ['Git', 'GitHub', 'VS Code', 'Docker', 'Linux', 'Agile/Scrum']
+      name: 'Tools & Methods',
+      items: ['Git', 'GitHub', 'VS Code', 'Agile/Scrum', 'Code Reviews', 'OOP']
     },
     {
-      name: 'Soft Skills',
-      items: ['Deutsch (C1)', 'English (B2)', 'Español (Nativo)', 'Teamwork', 'Problem Solving']
+      name: 'Sprachen & Soft Skills',
+      items: ['Español (Nativo)', 'Deutsch (Fließend)', 'English (Sehr gut)', 'Teamfähigkeit', 'Problemlösung', 'Interkulturelle Kompetenz']
     }
   ];
 }

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollAnimationService } from '../../services/scroll-animation';
 
 @Component({
   selector: 'app-contact',
@@ -8,27 +9,34 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
-export class Contact {
+export class Contact implements AfterViewInit {
+  @ViewChild('section') section!: ElementRef;
   year = new Date().getFullYear();
+
+  constructor(private scrollAnimation: ScrollAnimationService) {}
+
+  ngAfterViewInit() {
+    this.scrollAnimation.observe(this.section.nativeElement);
+  }
 
   links = [
     {
       icon: '📧',
       label: 'Email',
-      value: 'tu@email.com',
-      url: 'mailto:tu@email.com'
+      value: 'leoncamilo9@gmail.com',
+      url: 'mailto:leoncamilo9@gmail.com'
     },
     {
       icon: '💼',
       label: 'LinkedIn',
-      value: '/in/tu-perfil',
-      url: 'https://linkedin.com/in/tu-perfil'
+      value: '/in/camilo-leon-dev13',
+      url: 'https://www.linkedin.com/in/camilo-leon-dev13'
     },
     {
       icon: '🐙',
       label: 'GitHub',
-      value: '@tu-usuario',
-      url: 'https://github.com/tu-usuario'
+      value: '@Cleon113',
+      url: 'https://github.com/Cleon113'
     }
   ];
 }

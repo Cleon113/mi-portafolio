@@ -30,9 +30,7 @@
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
 
-    // Glitch on hover
     &:hover {
       animation: glitch-1 0.3s linear;
     }
@@ -68,15 +66,15 @@
   }
 
   &__orb {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%,
       var(--accent-cyan) 0%,
       var(--accent-magenta) 50%,
       transparent 70%);
-    filter: blur(60px);
-    opacity: 0.4;
+    filter: blur(80px);
+    opacity: 0.5;
     animation: float 6s ease-in-out infinite;
   }
 }
@@ -90,6 +88,7 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  cursor: pointer;
 
   &--primary {
     background: var(--accent-gradient);

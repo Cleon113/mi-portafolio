@@ -1,8 +1,8 @@
-<section class="about" id="about">
+<section class="about" id="about" #section>
   <div class="about__container">
-    <h2 class="about__title" data-text="Sobre mí">Sobre mí</h2>
+    <h2 class="about__title animate-on-scroll">Sobre mí</h2>
     <div class="about__grid">
-      <div class="about__text">
+      <div class="about__text animate-on-scroll">
         <p>
           Soy Camilo — desarrollador colombiano viviendo en Hamburg, Alemania.
           Me formé como <span class="highlight">Fachinformatiker für Anwendungsentwicklung</span>,
@@ -20,7 +20,7 @@
         </p>
       </div>
       <div class="about__stats">
-        <div class="stat" *ngFor="let stat of stats">
+        <div class="stat animate-on-scroll" *ngFor="let stat of stats">
           <span class="stat__number">{{ stat.value }}</span>
           <span class="stat__label">{{ stat.label }}</span>
         </div>

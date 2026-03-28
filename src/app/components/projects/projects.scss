@@ -126,6 +126,14 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
+
+  &__note {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-magenta);
+    font-style: italic;
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: 768px) {
