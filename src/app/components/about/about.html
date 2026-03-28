@@ -1,29 +1,19 @@
 <section class="about" id="about" #section>
   <div class="about__container">
-    <h2 class="about__title animate-on-scroll">Sobre mí</h2>
+    <h2 class="about__title animate-on-scroll">{{ t.t('about.title') }}</h2>
     <div class="about__grid">
       <div class="about__text animate-on-scroll">
-        <p>
-          Soy Camilo — desarrollador colombiano viviendo en Hamburg, Alemania.
-          Me formé como <span class="highlight">Fachinformatiker für Anwendungsentwicklung</span>,
-          donde trabajé con frontend, backend, bases de datos y buenas prácticas
-          de desarrollo.
-        </p>
-        <p>
-          He construido mi carrera empezando de cero en países diferentes.
-          Esa resiliencia es lo que traigo a cada línea de código: adaptabilidad,
-          ganas de aprender y la mentalidad de resolver problemas reales.
-        </p>
-        <p>
-          Cuando no estoy programando, estoy en el gym, en la bici,
-          experimentando en la cocina o leveling up mi alemán e inglés.
-        </p>
+        <p [innerHTML]="t.t('about.p1')"></p>
+        <p>{{ t.t('about.p2') }}</p>
+        <p>{{ t.t('about.p3') }}</p>
       </div>
       <div class="about__stats">
-        <div class="stat animate-on-scroll" *ngFor="let stat of stats">
-          <span class="stat__number">{{ stat.value }}</span>
-          <span class="stat__label">{{ stat.label }}</span>
-        </div>
+        @for (stat of stats; track stat.label) {
+          <div class="stat animate-on-scroll">
+            <span class="stat__number">{{ stat.value }}</span>
+            <span class="stat__label">{{ stat.label }}</span>
+          </div>
+        }
       </div>
     </div>
   </div>

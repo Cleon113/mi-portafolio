@@ -102,8 +102,46 @@
   }
 }
 
+
+.nav__lang {
+    display: flex;
+    gap: 0.25rem;
+    margin-left: 1rem;
+  }
+
+  .nav__lang-btn {
+    background: none;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    &--active {
+      background: var(--accent-cyan);
+      color: var(--bg-deep);
+      border-color: var(--accent-cyan);
+      font-weight: 700;
+    }
+  }
+
 @media (max-width: 768px) {
   .nav__burger { display: block; }
+
+  .nav__lang {
+    position: absolute;
+    top: 1.5rem;
+    right: 4rem;
+  }
 
   .nav__links {
     position: fixed;

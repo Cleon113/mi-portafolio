@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { TranslationService } from '../../services/translation';
 
 @Component({
   selector: 'app-hero',
@@ -7,20 +8,29 @@ import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
   styleUrl: './hero.scss'
 })
 export class Hero implements AfterViewInit {
-  roles = ['Junior Software Developer ', 'Frontend Developer ', 'Fachinformatiker für Anwendungsentwicklung '];
+  rolesMap = {
+    es: ['Junior Software Developer', 'Frontend Developer', 'Fachinformatiker für Anwendungsentwicklung'],
+    de: ['Junior Software Entwickler', 'Frontend Entwickler', 'Fachinformatiker für Anwendungsentwicklung'],
+    en: ['Junior Software Developer', 'Frontend Developer', 'Application Developer']
+  };
+
   currentRole = '';
   roleIndex = 0;
   charIndex = 0;
   isDeleting = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, public t: TranslationService) {}
+
+  get roles() {
+    return this.rolesMap[this.t.lang];
+  }
 
   ngAfterViewInit() {
     setTimeout(() => this.typeEffect(), 0);
   }
 
   typeEffect() {
-    const current = this.roles[this.roleIndex];
+    const current = this.roles[this.roleIndex % this.roles.length];
 
     if (!this.isDeleting) {
       this.currentRole = current.substring(0, this.charIndex + 1);

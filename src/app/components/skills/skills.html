@@ -1,15 +1,17 @@
 <section class="skills" id="skills" #section>
   <div class="skills__container">
-    <h2 class="skills__title animate-on-scroll">Tech Stack</h2>
+    <h2 class="skills__title animate-on-scroll">{{ t.t('skills.title') }}</h2>
     <div class="skills__grid">
-      <div class="skills__category animate-on-scroll" *ngFor="let category of categories">
-        <h3 class="skills__category-name">{{ category.name }}</h3>
-        <div class="skills__tags">
-          <span class="skills__tag" *ngFor="let skill of category.items">
-            {{ skill }}
-          </span>
+      @for (category of categories; track category.name) {
+        <div class="skills__category animate-on-scroll">
+          <h3 class="skills__category-name">{{ category.name }}</h3>
+          <div class="skills__tags">
+            @for (skill of category.items; track skill) {
+              <span class="skills__tag">{{ skill }}</span>
+            }
+          </div>
         </div>
-      </div>
+      }
     </div>
   </div>
 </section>

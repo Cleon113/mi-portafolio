@@ -2,10 +2,20 @@
   <div class="nav__container">
     <a (click)="scrollTo('home')" class="nav__logo">&lt;C/&gt;</a>
     <ul class="nav__links" [class.nav__links--open]="menuOpen">
-      <li *ngFor="let link of links">
-        <a (click)="scrollTo(link.id)">{{ link.label }}</a>
-      </li>
+      @for (link of links; track link.id) {
+        <li><a (click)="scrollTo(link.id)">{{ link.label }}</a></li>
+      }
     </ul>
+    <div class="nav__lang">
+      @for (lang of languages; track lang.code) {
+        <button
+          (click)="switchLang(lang.code)"
+          [class.nav__lang-btn--active]="t.lang === lang.code"
+          class="nav__lang-btn">
+          {{ lang.label }}
+        </button>
+      }
+    </div>
     <button class="nav__burger" (click)="menuOpen = !menuOpen">
       <span [class.open]="menuOpen"></span>
     </button>

@@ -1,22 +1,32 @@
 <section class="projects" id="projects" #section>
   <div class="projects__container">
-    <h2 class="projects__title animate-on-scroll">Proyectos</h2>
+    <h2 class="projects__title animate-on-scroll">{{ t.t('projects.title') }}</h2>
     <div class="projects__grid">
-      <div class="project-card animate-on-scroll" *ngFor="let project of projects">
-        <div class="project-card__header">
-          <span class="project-card__icon">{{ project.icon }}</span>
-          <div class="project-card__links">
-            <a *ngIf="project.github" [href]="project.github" target="_blank" class="project-card__link">GitHub</a>
-            <a *ngIf="project.live" [href]="project.live" target="_blank" class="project-card__link project-card__link--live">Live</a>
-            <span *ngIf="project.note" class="project-card__note">{{ project.note }}</span>
+      @for (project of projects; track project.name) {
+        <div class="project-card animate-on-scroll">
+          <div class="project-card__header">
+            <span class="project-card__icon">{{ project.icon }}</span>
+            <div class="project-card__links">
+              @if (project.github) {
+                <a [href]="project.github" target="_blank" class="project-card__link">GitHub</a>
+              }
+              @if (project.live) {
+                <a [href]="project.live" target="_blank" class="project-card__link project-card__link--live">Live</a>
+              }
+              @if (project.note) {
+                <span class="project-card__note">{{ project.note }}</span>
+              }
+            </div>
+          </div>
+          <h3 class="project-card__name">{{ project.name }}</h3>
+          <p class="project-card__description">{{ project.description }}</p>
+          <div class="project-card__tags">
+            @for (tag of project.tags; track tag) {
+              <span class="project-card__tag">{{ tag }}</span>
+            }
           </div>
         </div>
-        <h3 class="project-card__name">{{ project.name }}</h3>
-        <p class="project-card__description">{{ project.description }}</p>
-        <div class="project-card__tags">
-          <span class="project-card__tag" *ngFor="let tag of project.tags">{{ tag }}</span>
-        </div>
-      </div>
+      }
     </div>
   </div>
 </section>

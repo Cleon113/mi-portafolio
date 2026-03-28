@@ -1,20 +1,17 @@
 <section class="hero" id="home">
   <div class="hero__grid">
     <div class="hero__content">
-      <p class="hero__tag">// Hola, soy</p>
+      <p class="hero__tag">{{ t.t('hero.greeting') }}</p>
       <h1 class="hero__name" data-text="Camilo">Camilo</h1>
       <div class="hero__role">
         <span class="hero__role-prefix">&gt;&nbsp;</span>
         <span class="hero__role-text">{{ currentRole }}</span>
         <span class="hero__cursor">_</span>
       </div>
-      <p class="hero__description">
-        Colombiano en Hamburg. Construyo cosas para la web
-        con código limpio y diseño con personalidad.
-      </p>
+      <p class="hero__description">{{ t.t('hero.description') }}</p>
       <div class="hero__cta">
-        <a (click)="scrollTo('projects')" class="btn btn--primary">Ver Proyectos</a>
-        <a (click)="scrollTo('contact')" class="btn btn--outline">Contacto</a>
+        <a (click)="scrollTo('projects')" class="btn btn--primary">{{ t.t('hero.projects') }}</a>
+        <a (click)="scrollTo('contact')" class="btn btn--outline">{{ t.t('hero.contact') }}</a>
       </div>
     </div>
     <div class="hero__visual">
