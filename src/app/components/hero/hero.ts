@@ -19,6 +19,13 @@ export class Hero implements AfterViewInit {
     setTimeout(() => this.typeEffect(), 0);
   }
 
+  scrollTo(id: string) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
   typeEffect() {
     const current = this.roles[this.roleIndex];
 

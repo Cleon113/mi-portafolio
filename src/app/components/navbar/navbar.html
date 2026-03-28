@@ -1,9 +1,9 @@
 <nav class="nav" [class.nav--scrolled]="isScrolled">
   <div class="nav__container">
-    <a href="#home" class="nav__logo" data-text="C.">&lt;C/&gt;</a>
+    <a (click)="scrollTo('home')" class="nav__logo">&lt;C/&gt;</a>
     <ul class="nav__links" [class.nav__links--open]="menuOpen">
       <li *ngFor="let link of links">
-        <a [href]="'#' + link.id" (click)="menuOpen = false">{{ link.label }}</a>
+        <a (click)="scrollTo(link.id)">{{ link.label }}</a>
       </li>
     </ul>
     <button class="nav__burger" (click)="menuOpen = !menuOpen">

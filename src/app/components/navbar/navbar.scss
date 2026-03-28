@@ -30,6 +30,7 @@
     color: var(--accent-cyan);
     text-decoration: none;
     transition: text-shadow 0.3s;
+    cursor: pointer;
 
     &:hover {
       text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
@@ -50,6 +51,7 @@
       letter-spacing: 0.1em;
       transition: color 0.3s;
       position: relative;
+      cursor: pointer;
 
       &::after {
         content: '';

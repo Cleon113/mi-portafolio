@@ -25,4 +25,12 @@ export class Navbar {
   onScroll() {
     this.isScrolled = window.scrollY > 50;
   }
+
+  scrollTo(id: string) {
+    this.menuOpen = false;
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
