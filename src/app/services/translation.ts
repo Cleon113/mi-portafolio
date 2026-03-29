@@ -9,6 +9,9 @@ export class TranslationService {
   private currentLang: Language = 'es';
 
   private translations: Record<string, Record<Language, string>> = {
+
+    'hero.download': { es: 'Descargar CV', de: 'Lebenslauf herunterladen', en: 'Download CV' },
+'contact.download': { es: 'Descargar mi CV', de: 'Meinen Lebenslauf herunterladen', en: 'Download my CV' },
     // Navbar
     'nav.home': { es: 'Home', de: 'Home', en: 'Home' },
     'nav.about': { es: 'Sobre mí', de: 'Über mich', en: 'About' },
