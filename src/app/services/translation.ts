@@ -97,18 +97,18 @@ export class TranslationService {
       de: 'Softwareentwicklung mit Java. Frontend mit Angular und JavaScript für responsive Benutzeroberflächen. Code Reviews, agile Teamarbeit mit Scrum.',
       en: 'Software development with Java. Frontend with Angular and JavaScript for responsive interfaces. Code reviews, agile teamwork with Scrum.'
     },
-    'exp.bbs.role': { es: 'Berufsschule – Fachinformatiker', de: 'Berufsschule – Fachinformatiker', en: 'Vocational School – IT Specialist' },
-    'exp.bbs.desc': {
-      es: 'Formación teórica en desarrollo de aplicaciones. Programación orientada a objetos, bases de datos SQL y desarrollo ágil.',
-      de: 'Theoretische Ausbildung in Anwendungsentwicklung. Objektorientierte Programmierung, SQL-Datenbanken und agile Entwicklung.',
-      en: 'Theoretical training in application development. Object-oriented programming, SQL databases and agile development.'
-    },
-    'exp.aupair.role': { es: 'Au-Pair / Kinderbetreuer', de: 'Au-Pair / Kinderbetreuer', en: 'Au-Pair / Childcare' },
-    'exp.aupair.desc': {
-      es: 'Cuidado de niños en entorno intercultural. Adquirí fluidez en alemán a través de la práctica diaria. Dos familias: Bad Gandersheim y Lüneburg.',
-      de: 'Kinderbetreuung in interkulturellem Umfeld. Erwerb fließender Deutschkenntnisse durch tägliche Praxis. Zwei Gastfamilien: Bad Gandersheim und Lüneburg.',
-      en: 'Childcare in an intercultural environment. Acquired German fluency through daily practice. Two host families: Bad Gandersheim and Lüneburg.'
-    },
+'exp.aupair1.role': { es: 'Au-Pair', de: 'Au-Pair / Kinderbetreuer', en: 'Au-Pair / Childcare' },
+'exp.aupair1.desc': {
+  es: 'Cuidado de niños en entorno intercultural. Adquirí mis primeras bases de alemán a través de la práctica diaria.',
+  de: 'Kinderbetreuung in interkulturellem Umfeld. Erwerb erster Deutschkenntnisse durch tägliche Praxis.',
+  en: 'Childcare in an intercultural environment. Acquired my first German language skills through daily practice.'
+},
+'exp.aupair2.role': { es: 'Au-Pair', de: 'Au-Pair / Kinderbetreuer', en: 'Au-Pair / Childcare' },
+'exp.aupair2.desc': {
+  es: 'Continuación como Au-Pair con una segunda familia. Consolidé mi fluidez en alemán y gané mayor independencia.',
+  de: 'Fortsetzung als Au-Pair bei einer zweiten Gastfamilie. Festigung meiner Deutschkenntnisse und mehr Selbstständigkeit.',
+  en: 'Continued as Au-Pair with a second family. Consolidated my German fluency and gained greater independence.'
+},
 
     // Contact
     'contact.title': { es: 'Contacto', de: 'Kontakt', en: 'Contact' },

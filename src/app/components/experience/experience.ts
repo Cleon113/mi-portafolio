@@ -46,17 +46,17 @@ export class Experience implements AfterViewInit {
         tags: ['Angular', 'Java', 'TypeScript', 'Scrum', 'Git']
       },
       {
-        date: '09.2022 – 06.2025',
-        role: this.t.t('exp.bbs.role'),
-        company: 'BBS Wilhelmshaven',
-        description: this.t.t('exp.bbs.desc'),
-        tags: ['OOP', 'SQL', 'Software Engineering']
+        date: '10.2021 – 08.2022',
+        role: this.t.t('exp.aupair2.role'),
+        company: 'Lüneburg',
+        description: this.t.t('exp.aupair2.desc'),
+        tags: ['Deutsch', 'Interkulturell', 'Selbstständigkeit']
       },
       {
-        date: '11.2020 – 08.2022',
-        role: this.t.t('exp.aupair.role'),
-        company: 'Gastfamilien in Niedersachsen',
-        description: this.t.t('exp.aupair.desc'),
+        date: '11.2020 – 09.2021',
+        role: this.t.t('exp.aupair1.role'),
+        company: 'Bad Gandersheim',
+        description: this.t.t('exp.aupair1.desc'),
         tags: ['Deutsch', 'Interkulturell', 'Organization']
       }
     ];
