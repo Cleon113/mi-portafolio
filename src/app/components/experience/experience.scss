@@ -139,29 +139,51 @@
 }
 
 @media (max-width: 768px) {
+  .experience {
+    padding: 5rem 1.5rem;
+  }
+
+  .experience__title {
+    font-size: 2rem;
+  }
+
   .timeline {
     &::before {
-      left: 20px;
+      left: 12px;
     }
 
     &__item {
       width: 100%;
-      padding-left: 3.5rem;
+      padding-left: 2.5rem;
       padding-right: 0;
 
       &--right {
         margin-left: 0;
-        padding-left: 3.5rem;
+        padding-left: 2.5rem;
       }
     }
 
     &__dot {
-      left: 12px;
+      left: 4px;
       right: auto;
+      width: 14px;
+      height: 14px;
 
       .timeline__item--right & {
-        left: 12px;
+        left: 4px;
       }
+    }
+
+    &__card {
+      padding: 1.5rem;
+    }
+
+    &__role {
+      font-size: 1.1rem;
+    }
+
+    &__description {
+      font-size: 0.9rem;
     }
   }
 }

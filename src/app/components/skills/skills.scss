@@ -78,7 +78,25 @@
 }
 
 @media (max-width: 768px) {
+  .skills {
+    padding: 5rem 1.5rem;
+  }
+
+  .skills__title {
+    font-size: 2rem;
+  }
+
   .skills__grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skills__category {
+    padding: 1.5rem;
+  }
+
+  .skills__tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
   }
 }

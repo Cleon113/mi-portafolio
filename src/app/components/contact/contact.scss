@@ -130,7 +130,25 @@
   }
 
 @media (max-width: 768px) {
+  .contact {
+    padding: 5rem 1.5rem;
+  }
+
+  .contact__title {
+    font-size: 2rem;
+  }
+
   .contact__links {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact__card {
+    padding: 1.5rem;
+  }
+
+  .btn--download-lg {
+    font-size: 0.8rem;
+    padding: 0.8rem 1.5rem;
   }
 }
