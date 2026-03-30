@@ -1,59 +1,191 @@
-# MiPortafolio
+<div align="center">
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+# 🚀 Mi Portafolio — Camilo León
 
-## Development server
+### *Full Stack Developer · Angular · Java · Multilingüe*
 
-To start a local development server, run:
+[![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
+[![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://cleon113.github.io/mi-portafolio/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
+
+**[🌐 Ver en vivo →](https://cleon113.github.io/mi-portafolio/)**
+
+</div>
+
+---
+
+## ✨ ¿Qué es esto?
+
+Portafolio personal construido con **Angular 21** — diseño **Glitch Noir Terminal**, animaciones suaves al hacer scroll, efecto typewriter en el hero, y soporte multilingüe completo (🇪🇸 / 🇩🇪 / 🇬🇧).
+
+Un SPA moderno, rápido, responsive y hecho desde cero.
+
+---
+
+## 🎯 Características principales
+
+|
+ Feature 
+|
+ Detalle 
+|
+|
+---
+|
+---
+|
+|
+ 🌍 
+**
+Multilingüe
+**
+|
+ Español, Alemán e Inglés con cambio instantáneo 
+|
+|
+ ⌨️ 
+**
+Typewriter Effect
+**
+|
+ Roles que se escriben solos en el hero 
+|
+|
+ 🎞️ 
+**
+Scroll Animations
+**
+|
+ Intersection Observer API para efectos al hacer scroll 
+|
+|
+ 📱 
+**
+Responsive
+**
+|
+ Mobile-first, se ve bien en todo 
+|
+|
+ 🔍 
+**
+SEO Ready
+**
+|
+ Meta tags, Open Graph y Twitter Card configurados 
+|
+|
+ 🚀 
+**
+Deploy automático
+**
+|
+ GitHub Pages con un solo comando 
+|
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- [Angular 21](https://angular.io/) — standalone components, sin módulos
+- [TypeScript 5.9](https://www.typescriptlang.org/) — modo estricto activado
+- [RxJS 7.8](https://rxjs.dev/) — programación reactiva
+- SCSS — theming y animaciones custom
+
+**Tipografías**
+- [Syne](https://fonts.google.com/specimen/Syne) — títulos y branding
+- [Space Mono](https://fonts.google.com/specimen/Space+Mono) — estética terminal
+
+**Tooling**
+- Angular CLI 21.2.5
+- Vitest — unit testing
+- Prettier — formateo de código
+- angular-cli-ghpages — deploy a GitHub Pages
+
+---
+
+## 📁 Estructura del proyecto
+
+
+mi-portafolio/
+├── src/
+│ ├── app/
+│ │ ├── components/
+│ │ │ ├── navbar/ # Navegación sticky + cambio de idioma
+│ │ │ ├── hero/ # Sección inicial con typewriter
+│ │ │ ├── about/ # Sobre mí + estadísticas
+│ │ │ ├── skills/ # Habilidades técnicas y blandas
+│ │ │ ├── projects/ # Proyectos destacados
+│ │ │ ├── experience/ # Historial laboral
+│ │ │ └── contact/ # Links de contacto + footer
+│ │ ├── services/
+│ │ │ ├── translation.ts # Gestión de idiomas
+│ │ │ └── scroll-animation.ts # Animaciones con Intersection Observer
+│ │ └── app.ts # Componente raíz
+│ ├── styles.scss # Estilos globales y variables
+│ └── index.html # Meta tags y fuentes
+├── public/
+│ ├── CamiloLeonLebenslauf.pdf # CV descargable
+│ └── assets/
+├── angular.json
+├── package.json
+└── tsconfig.json
+
+
+---
+
+## 🚀 Cómo correrlo localmente
+
+### Prerrequisitos
+
+- Node.js `>= 18`
+- npm `>= 11`
+- Angular CLI: `npm install -g @angular/cli`
+
+### Instalación
 
 ```bash
-ng serve
-```
+# 1. Clona el repositorio
+git clone https://github.com/Cleon113/mi-portafolio.git
+cd mi-portafolio
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# 2. Instala dependencias
+npm install
 
-## Code scaffolding
+# 3. Levanta el servidor de desarrollo
+npm start
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Abre http://localhost:4200 en tu navegador.
 
-```bash
-ng generate component component-name
-```
+📦 Scripts disponibles
+npm start       # Servidor de desarrollo (localhost:4200)
+npm run build   # Build de producción → /dist
+npm test        # Unit tests con Vitest
+npm run watch   # Build en modo watch
+ng deploy       # Deploy a GitHub Pages
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+🌐 Secciones del portafolio
+Hero — Presentación con efecto typewriter y CTAs
+About — Intro personal + estadísticas (3+ años de experiencia, 3 idiomas, 2 países)
+Skills — Frontend, Backend, Tools & Methods, y habilidades blandas
+Projects — AzubiPortal (Crealogix) y este mismo portafolio
+Experience — Timeline laboral desde 2020 hasta hoy
+Contact — Email, LinkedIn y GitHub
+📬 Contacto
+<div align="center">
+Show Image
 
-```bash
-ng generate --help
-```
+Show Image
 
-## Building
+Show Image
 
-To build the project run:
+</div>
+<div align="center">
+Hecho con 💻 y ☕ por Camilo León
 
-```bash
-ng build
-```
+"Code, coffee, repeat."
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+</div> ```
